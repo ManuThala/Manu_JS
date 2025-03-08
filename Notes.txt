@@ -1,0 +1,15 @@
+JAVASCRIPT-->  
+
+is a lightweight interpreted programming language, While it is most well-known as the scripting language for Web pages, JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+
+DataTypes-->
+
+Js is a lossly typed language
+
+js is a dynamically typed language
+
+primitive types--> Number,Strings,Boolean
+
+Trivial types--> null,undefined
+
+composite types--> Array,object

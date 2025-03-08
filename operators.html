@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator title</title>
+    <script>
+      var a = 3;
+      var b = 4;
+      // Airthmatic operator
+      document.writeln(a + b + "<br>");
+      document.writeln(a - b + "<br>");
+      document.writeln(a * b + "<br>");
+      document.writeln(a / b + "<br>");
+
+      //Comparision operator
+      document.writeln(a == b + "<br>");
+      document.writeln(a === b + "<br>");
+      document.writeln(a != b + "<br>");
+      document.writeln(a !== b + "<br>");
+      document.writeln(a < b + "<br>");
+      document.writeln(a > b + "<br>");
+      document.writeln(a >= b + "<br>");
+      document.writeln(a <= b + "<br>");
+
+      //   Logical operator
+      document.writeln(a < 10 && b > 10 + "<br>");
+      document.writeln(a < 10 || b < 10 + "<br>");
+      document.writeln(a != b + "<br>");
+
+      //   Assignment operator
+      document.writeln((a = 2)); // Set a to 2
+      document.writeln((a += 2)); // Add 2 to a, now a = 4
+      document.writeln((a -= 2)); // Subtract 2 from a, now a = 2
+      document.writeln((a *= 2)); // Multiply a by 2, now a = 4
+      document.writeln((a /= 2)); // Divide a by 2, now a = 2
+      document.writeln((a %= 2)); // Modulo a by 2, now a = 0
+      document.writeln((a <<= 1)); // Left shift a by 1, now a = 0 (since 0 << 1 = 0)
+      document.writeln((a >>= 1)); // Right shift a by 1, now a = 0 (since 0 >> 1 = 0)
+      document.writeln((a >>>= 1)); // Unsigned right shift a by 1, now a = 0
+      document.writeln((a &= 1)); // Bitwise AND a with 1, now a = 0 (since 0 & 1 = 0)
+      document.writeln((a ^= 1)); // Bitwise XOR a with 1, now a = 1 (since 0 ^ 1 = 1)
+      document.writeln((a |= 1)); // Bitwise OR a with 1, now a = 1 (since 1 | 1 = 1)
+      document.writeln((a **= 2)); // a raised to the power of 2, now a = 1 (since 1^2 = 1)
+
+      //   Conditional operator
+      var age = 23;
+
+      vote =
+        age > 18
+          ? "Voting  rights you have"
+          : "age sholud be greter than 18 to vote";
+      document.writeln(vote);
+
+      //   typeof operator
+      document.writeln(typeof a);
+      //   document.writeln(instanceof a)
+
+      //   Bitwise operator
+      document.writeln(5 & 1);
+      document.writeln(5 | 1);
+      document.writeln(~5);
+      document.writeln(5 ^ 1);
+      document.writeln(5 << 1);
+      document.writeln(5 >> 1);
+      document.writeln(5 >>> 1);
+    </script>
+  </head>
+  <body></body>
+</html>
