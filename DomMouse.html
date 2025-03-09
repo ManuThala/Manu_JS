@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom using mouse events</title>
+    <script>
+      function setnewImage() {
+        document.getElementById("img1").src = "./9111714.png";
+      }
+      function setoldImage() {
+        document.getElementById("img1").src = "./manu_im.jpg";
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      id="img1"
+      onmouseover="setnewImage()"
+      onmouseout="setoldImage()"
+      src="./manu_im.jpg"
+      width="600px"
+      alt="Image Not found "
+    />
+  </body>
+</html>

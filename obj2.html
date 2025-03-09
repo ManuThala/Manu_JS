@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects part two</title>
+    <script>
+      var car = {
+        car_brand: "tesla",
+        car_model: "Model",
+        price: 35000,
+      };
+
+      car.fuelType = "electric";
+      delete car.price;
+      var str1 = new String();
+      document.writeln(typeof str1);
+      document.writeln(car.fuelType);
+      document.writeln(car.price);
+    </script>
+  </head>
+  <body></body>
+</html>

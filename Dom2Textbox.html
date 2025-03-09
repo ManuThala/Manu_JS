@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom manipulation part2</title>
+    <script>
+      function fn1() {
+        var str1 = document.getElementById("text1").value;
+        // alert("Name is " + str1);
+        var str2 = document.getElementById("password").value;
+        if (str1 == str2) {
+          alert("Name and password are equal");
+        } else {
+          alert("password and username are incorrect");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="text1" placeholder="Enter Name" /><br /><br />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="password"
+    /><br /><br />
+    <button id="btn1" onclick="fn1()">click me</button>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Part three using Radio button</title>
+    <script>
+        function fn1(){
+            document.getElementById('rd1');
+            document.getElementById('rd2');
+            
+            if(rd1.checked==true)
+                alert('The channel selectd is--> '+rd1.value)
+            else if(rd2.checked==true)
+                alert('The channel selectd is--> '+rd2.value)
+            else
+            document.writeln('No channel selected')
+        } 
+    </script>
+  </head>
+  <body>
+    <input type="radio" id="rd1" name='grp1' value="simple  snippet">simple snippet</input><br><br>
+    <input type="radio" id='rd2' name='grp1' value="Telusko Learning">Telusko Learning</input><br><br>
+    <button id="btn1" onclick="fn1()">click me</button>
+  </body>
+</html>

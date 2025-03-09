@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom manipulation Select Box</title>
+    <script>
+      function fn1() {
+        var select = document.getElementById("selectbox");
+        alert(select.options[select.selectedIndex].value);
+      }
+    </script>
+  </head>
+  <body>
+    <select name="" id="selectbox">
+      <option value="simple snippet">simple snippet</option>
+      <option value="Telusko learning">Telusko learning</option>
+      <option value="Manu learning">Manu learning</option></select
+    ><br /><br />
+    <button onclick="fn1()">click me</button>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom using Tag Name</title>
+    <script>
+      function changestyle() {
+        var paragraph = document.getElementsByTagName("p");
+        // paragraph[0].style.fontSize = "25px"; // Added "px" to the value
+        for (var i = 0; i < paragraph.length; i++) {
+          paragraph[i].style.fontSize = "25px";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>This is paragraph1</p>
+    <p>This is paragraph2</p>
+    <p>This is paragraph3</p>
+    <p>This is paragraph4</p>
+    <p>This is paragraph5</p>
+    <button onclick="changestyle()">Click me</button>
+  </body>
+</html>
