@@ -8,9 +8,18 @@
       function validate() {
         var uname = document.getElementById("name");
         var pass = document.getElementById("password");
-
-        if (uname.value.trim() == "" || pass.value.trim() == "") {
-          alert("blank is not allowed");
+        if (uname.value.trim() == "") {
+          alert("Blank username");
+          uname.style.border = "solid 3px red";
+          document.getElementById("lb1").style.visibility = "visible";
+          return false;
+        } else if (pass.value.trim() == "") {
+          alert("Blank Password");
+          pass.style.border = "solid 3px red";
+          document.getElementById("lb2").style.visibility = "visible";
+          return false;
+        } else if (pass.value.trim().length < 5) {
+          alert("Password length should be greater than five characters long");
           return false;
         } else {
           return true;
@@ -20,14 +29,14 @@
   </head>
   <body>
     <form onsubmit="return validate()" action="message.html">
-      username <input type="text" name="name" id="name" required /> <br /><br />
+      username <input type="text" name="name" id="name" />
+      <label id="lb1" style="color: red; visibility: hidden">Invalid</label
+      ><br /><br />
       password
-      <input
-        type="password"
-        name="password"
-        id="password"
-        required
-      /><br /><br />
+      <input type="password" name="password" id="password" />
+      <label id="lb2" style="color: red; visibility: hidden"
+        >Password too short</label
+      ><br /><br /><br /><br />
       <button type="submit">Submit</button>
     </form>
   </body>

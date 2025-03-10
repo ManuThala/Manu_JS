@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular expressions in js</title>
+    <script>
+        function validate(){
+            var name=document.getElementById('name').value;
+            var regx=/[a-m A-M 0-9]777/;
+            // var reg=/[a-z A-Z]a[0-9]7/;
+            // var reg=/[^a][0-9]7/;
+            if (regx.test(name)){
+                alert('valid user name')
+            }
+            else{
+                alert('Invalid user name')
+                document.getElementById('lb1').style.visibility='visible'
+            }
+
+        }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validate()" action="message.html">
+      username <input type="text" name="name" id="name" />
+      <label id="lb1" style="color: red; visibility: hidden">Invalid Username</label
+      ><br /><br />
+      <button onclick="validate()" type="button">submit</button>
+  </body>
+</html>

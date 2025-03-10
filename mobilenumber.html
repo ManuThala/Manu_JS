@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile number validation</title>
+    <script>
+      function validate() {
+        var num = document.getElementById("number").value;
+        var regex = /^[7-9]\d{9}$/;
+        if (regex.test(num)) {
+          document.getElementById("lb1").innerHTML = "valid";
+          document.getElementById("lb1").style.visibility = "visible";
+          document.getElementById("lb1").style.color = "green";
+        } else {
+          document.getElementById("lb1").innerHTML = "Invalid";
+          document.getElementById("lb1").style.visibility = "visible";
+          document.getElementById("lb1").style.color = "red";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Mobile
+    <input type="text" name="number" id="number" placeholder="number" />
+    <label id="lb1" style="color: red; visibility: hidden">Invaid Number</label
+    ><br /><br />
+    <button onclick="validate()" type="button">submit</button>
+  </body>
+</html>
