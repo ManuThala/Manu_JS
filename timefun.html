@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Functions in JS</title>
+    <script>
+      var ID = 0;
+      var seconds = 0;
+      function printmsg() {
+        // document.getElementById("op").innerHTML = "5 seconds passed";
+        document.getElementById("op").innerHTML = seconds + " seconds";
+        seconds++;
+      }
+      function start() {
+        // ID = window.setTimeout(printmsg, 5000);
+        ID = window.setInterval(printmsg, 1000);
+      }
+      function stop() {
+        // window.clearTimeout(ID);
+        window.clearInterval(ID);
+      }
+    </script>
+  </head>
+  <body>
+    <button id="btnstart" onclick="start()">start</button>
+    <h2 id="op">Manu Harsha</h2>
+    <button id="btnstop" onclick="stop()">stop</button>
+  </body>
+</html>

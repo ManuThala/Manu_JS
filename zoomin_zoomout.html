@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoom in Zoom out</title>
+    <script>
+      var width = 100;
+      var diff = 2;
+      var intervalId = 0;
+      //   document.getElementById("img1").style.width = width+ "px";
+
+      function increase() {
+        clearInterval(intervalId);
+        intervalId = setInterval(zoomin, 20);
+      }
+
+      function decrease() {
+        clearInterval(intervalId);
+        intervalId = setInterval(zoomout, 20);
+      }
+
+      function zoomin() {
+        if (width < 200) {
+          width = width + diff;
+          document.getElementById("img1").style.width = width + "px";
+          console.log(width);
+        } else {
+          clearInterval(intervalId);
+        }
+      }
+
+      function zoomout() {
+        if (width > 90) {
+          width = width - diff;
+          console.log("after sub-->" + width);
+          document.getElementById("img1").style.width = width + "px";
+          console.log(width);
+        } else {
+          clearInterval(intervalId);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <br /><br />
+    <img
+      src="./heart.img"
+      id="img1"
+      style="width: 100px"
+      alt="image Not found"
+      onmouseover="increase()"
+      onmouseout="decrease()"
+    />
+  </body>
+</html>
