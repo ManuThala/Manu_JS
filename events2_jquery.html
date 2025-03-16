@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors part 2</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h2>Selectors up jquery</h2>
+    <p>this is outside division</p>
+    <p>this is outside division</p>
+    <div id="firstdiv" class="mydiv">
+      <p>This is first paragraph in first division</p>
+      <p>This is second paragraph in first division</p>
+    </div>
+
+    <div id="seconddiv" class="mydiv">
+      <p>This is first paragraph in second divisison</p>
+    </div>
+
+    <div id="'thirddiv" class="mydiv">
+      <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+      </ul>
+    </div>
+    <button id="btn1">click me</button>
+    <button id="btn2">click me Two</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      //   $("button").dblclick(fn1);
+      $("#btn1").mouseenter(fn1);
+      $("#btn1").mouseover(fn2);
+      $("#btn2").hover(fn1, fn2);
+      function fn1() {
+        $("#firstdiv").fadeIn(2000);
+      }
+      function fn2() {
+        $("#firstdiv").fadeOut(2000);
+      }
+    });
+  </script>
+</html>
